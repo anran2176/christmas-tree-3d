@@ -116,7 +116,6 @@ export const useHandGesture = () => {
       const middleTip = landmarks[12]
       const ringTip = landmarks[16]
       const pinkyTip = landmarks[20]
-      const palmBase = landmarks[0]
       const indexBase = landmarks[5]
 
       // Calculate distances
