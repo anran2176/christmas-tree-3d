@@ -125,8 +125,6 @@ export const useHandGesture = () => {
         thumbTip.y - indexTip.y
       )
 
-      const palmHeight = Math.abs(indexBase.y - palmBase.y)
-
       // Pinch/Grab detection - thumb and index close together
       if (thumbIndexDist < 0.05) {
         return 'pinch'

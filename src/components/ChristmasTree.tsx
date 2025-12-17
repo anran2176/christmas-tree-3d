@@ -1,4 +1,4 @@
-import { useRef, useMemo, useEffect } from 'react'
+import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { AnimationState } from '../types'
@@ -16,7 +16,7 @@ interface ChristmasTreeProps {
 const ChristmasTree = ({ animationState, userRotation }: ChristmasTreeProps) => {
   const groupRef = useRef<THREE.Group>(null!)
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (groupRef.current) {
       // Slow rotation
       groupRef.current.rotation.y += delta * 0.1

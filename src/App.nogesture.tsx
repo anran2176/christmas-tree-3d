@@ -7,7 +7,7 @@ import { AnimationState } from './types'
 
 function App() {
   const [animationState, setAnimationState] = useState<AnimationState>('TREE')
-  const [userRotation, setUserRotation] = useState(0)
+  const [userRotation] = useState(0)
 
   const toggleState = () => {
     setAnimationState(prev => prev === 'TREE' ? 'EXPLODE' : 'TREE')
